@@ -1,3 +1,3 @@
-# goit-markup-hw-03
+# goit-markup-hw-04
 
-Third homework GOIT (HTML, CSS), FlexBox
+Fourth homework GOIT (HTML, CSS), bg-images, icons
