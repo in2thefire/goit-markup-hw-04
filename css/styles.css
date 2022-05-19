@@ -195,6 +195,7 @@ img {
     background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio-page/background-images/hero-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 .hero-container {
@@ -247,6 +248,8 @@ img {
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
 }
 
 .advantages-list {
@@ -413,17 +416,16 @@ img {
 }
 
 .clients-link:hover,
-.clients-icon:hover {
+.clients-link:focus {
     border-color: var(--accent-clr);
-    fill: var(--accent-clr);
 }
 
 .clients-icon {
     fill: #AFB1B8;
 }
 
-.clients-link:focus,
-.clients-icon:focus {
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
     fill: var(--accent-clr);
 }
 
@@ -484,15 +486,18 @@ img {
 
 .gallery-item {
     background: var(--main-back-clr);
-    border-bottom: 1px solid #EEEEEE;
     box-sizing: border-box;
     min-width: 370px;
     margin-bottom: 30px;
 
 }
 
-.gallery-item:hover,
-.gallery-item:focus {
+.gallery-project {
+    display: block;
+}
+
+.gallery-project:hover,
+.gallery-project:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -515,6 +520,7 @@ img {
 
 .gallery-card {
     padding: 20px 24px;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .gallery-item:nth-of-type(7),
@@ -596,7 +602,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+
 }
 
 .socials-link {
