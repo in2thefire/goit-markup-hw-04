@@ -5,6 +5,7 @@
   --second-color: #212121;
   --white: #ffffff;
   --black: #000000;
+  --icon-color: #afb1b8;
   /* Fonts */
   --main-font: Roboto, sans-serif;
   --sec-font: Raleway, sans-serif;
@@ -142,14 +143,22 @@ img {
   margin-right: 0;
 }
 .header-contacts-link {
+  display: flex;
+  align-items: center;
   color: currentColor;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
+.mail-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.phone-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
 /* Main */
 
 /* Hero section */
@@ -210,6 +219,16 @@ img {
 }
 
 /* Features section */
+.thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
 .features-list {
   display: flex;
 }
@@ -278,7 +297,6 @@ img {
 }
 .team-item {
   background-color: var(--white);
-  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
 
   text-align: center;
 
@@ -301,11 +319,72 @@ img {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 }
 .team-card {
   padding-top: 30px;
   padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-icon {
+  fill: var(--icon-color);
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--white);
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+/* Clients section */
+.clients-tittle {
+  color: var(--second-color);
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+}
+.clients-icon {
+  fill: var(--icon-color);
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
 /* Portfolio page */
 
 /* Filter-buttons */
@@ -338,6 +417,7 @@ img {
 .gallery-filter-button:hover {
   background-color: var(--accent-color);
   color: var(--white);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .gallery-list {
   display: flex;
@@ -347,6 +427,10 @@ img {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+}
+.gallery-item:hover,
+.gallery-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .gallery-item:nth-child(3n) {
   margin-right: 0;
@@ -401,4 +485,48 @@ img {
 
 .footer-direction {
   color: var(--white);
+}
+
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+}
+.footer-address-logo {
+  margin-right: 70px;
+}
+
+.footer-h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.footer-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-social-icon {
+  fill: var(--white);
+}
+.footer-social-link:hover .social-icon,
+.footer-social-link:focus .social-icon {
+  fill: var(--white);
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
 }
